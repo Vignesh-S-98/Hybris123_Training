@@ -83,4 +83,12 @@
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
 			
+
+<!-- bean for registering ConcerttoursCustomSetup starts -->
+			<bean id="ConcerttoursCustomSetup" class="concerttours.setup.ConcerttoursCustomSetup" >
+  <property name="importService" ref="importService"/>
+  </bean>
+  <!-- bean for registering ConcerttoursCustomSetup ends -->
+  
+			
 </beans>
