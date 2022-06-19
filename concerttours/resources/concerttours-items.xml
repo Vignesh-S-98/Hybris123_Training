@@ -79,7 +79,11 @@
 <!-- itemtypes for the project concerttours starts -->
 
 	<itemtypes>
-<!--
+	
+	
+<!--  these are old pre-existing types -->
+
+<!-- 
 		<itemtype generate="true"
 		   code="MyProduct"
 		   jaloclass="concerttours.jalo.MyProduct"
@@ -124,6 +128,26 @@
 <!-- itemtype product ends -->
 
 
+<!-- itemtype concert starts -->
+
+<itemtype generate="true" code="Concert" extends="VariantProduct" autocreate="true">
+        <attributes>
+            <attribute qualifier="venue" type="java.lang.String">
+                <description>venue of concert</description>
+                <persistence type="property" />
+            </attribute>
+            <attribute qualifier="date" type="java.util.Date">
+                 <description>date of concert</description>
+                <persistence type="property" />
+            </attribute>
+            <attribute qualifier="concertType" type="ConcertType">
+                <description>type of concert (indoors or open air)</description>
+                <persistence type="property" />
+            </attribute>
+         </attributes>
+         </itemtype>  
+        
+<!-- itemtype concert ends -->
 
 <!-- itemtype Bands starts -->
 
@@ -153,29 +177,10 @@
 
 
 
-<!-- itemtype concert starts -->
 
-<itemtype generate="true" code="Concert" extends="VariantProduct" autocreate="true">
-        <attributes>
-            <attribute qualifier="venue" type="java.lang.String">
-                <description>venue of concert</description>
-                <persistence type="property" />
-            </attribute>
-            <attribute qualifier="date" type="java.util.Date">
-                 <description>date of concert</description>
-                <persistence type="property" />
-            </attribute>
-            <attribute qualifier="concertType" type="ConcertType">
-                <description>type of concert (indoors or open air)</description>
-                <persistence type="property" />
-            </attribute>
-         </attributes>
-         </itemtype>  
-        
-<!-- itemtype concert ends -->
   
 	</itemtypes>
 	
-<!-- itemtypes for the project concerttours starts -->
+<!-- itemtypes for the project concerttours ends -->
 
 </items>
